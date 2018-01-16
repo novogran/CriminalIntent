@@ -22,7 +22,7 @@ public class CrimeFragment extends Fragment {
     private EditText mTitleField;
     private Button mDateButton;
     private CheckBox mSolvedCheckBox;
-    private String myData;
+    public String myData;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
