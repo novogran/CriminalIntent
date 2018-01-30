@@ -1,6 +1,5 @@
 package com.example.vi1995.criminalintent;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -103,8 +102,8 @@ public class CrimeListFragment extends Fragment {
     private void updateSubtitle(){
         CrimeLab crimeLab = CrimeLab.get(getActivity());
         int crimeCount = crimeLab.getCrimes().size();
-        @SuppressLint("StringFormatMatches") String subtitle = getString(
-                R.string.subtitle_format, crimeCount);
+        String subtitle = getResources().getQuantityString(
+                R.plurals.subtitle_plurals, crimeCount, crimeCount);
 
         if(!mSubtitleVisible){
             subtitle = null;
@@ -142,7 +141,7 @@ public class CrimeListFragment extends Fragment {
             mDateTextView = itemView.findViewById(
                     R.id.list_item_crime_date_text_view);
             mSolvedCheckBox = itemView.findViewById(
-                    R.id.list_item_crime_solved_check_box);
+                    R.id.list_item_crime_solved_check_box)      ;
             itemView.setOnClickListener(this);
         }
 
