@@ -28,6 +28,7 @@ import android.widget.EditText;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.UUID;
 
 public class CrimeFragment extends Fragment {
@@ -218,7 +219,7 @@ public class CrimeFragment extends Fragment {
     }
 
     private void updateTime() {
-        SimpleDateFormat simpleDateFormatArrivals = new SimpleDateFormat("HH:mm");
+        SimpleDateFormat simpleDateFormatArrivals = new SimpleDateFormat("HH:mm", Locale.UK);
         Date d = new Date(mCrime.getDate().getTime());
         mTimeButton.setText(simpleDateFormatArrivals.format(d));
     }
