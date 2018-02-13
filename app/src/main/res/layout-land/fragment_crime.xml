@@ -5,21 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="?android:listSeparatorTextViewStyle"
-        android:text="@string/crime_title_hint"/>
-    <EditText
-        android:id="@+id/crime_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/crime_title_hint"/>
+    <include layout="@layout/view_camera_and_title" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="?android:listSeparatorTextViewStyle"
         android:text="@string/crime_details_label"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
             android:layout_weight="1" />
+
         <Button
             android:id="@+id/crime_date"
             android:layout_width="wrap_content"
@@ -41,6 +35,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginLeft="8dp"
             android:layout_weight="1"/>
+
         <CheckBox
             android:id="@+id/crime_solved"
             android:layout_width="wrap_content"
@@ -49,6 +44,7 @@
             android:layout_weight="1"
             android:text="@string/crime_solved_label" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -64,6 +60,7 @@
             android:layout_weight="1"
             android:layout_marginRight="8dp"
             android:text="@string/crime_suspect_text"/>
+
         <Button
             android:id="@+id/crime_report"
             android:layout_width="wrap_content"
@@ -71,5 +68,7 @@
             android:layout_marginLeft="8dp"
             android:layout_weight="1"
             android:text="@string/crime_report_text"/>
+
     </LinearLayout>
+
 </LinearLayout>

@@ -45,9 +45,9 @@ public class TimePickerFragment extends DialogFragment {
                 R.layout.dialog_time, null);
 
         mTimePicker = v.findViewById(R.id.dialog_time_time_picker);
+        mTimePicker.setCurrentHour(calendar.get(Calendar.HOUR_OF_DAY));
+        mTimePicker.setCurrentMinute(calendar.get(Calendar.MINUTE));
         mTimePicker.setIs24HourView(true);
-        mTimePicker.setCurrentHour(calendar.get(Calendar.HOUR));
-        mTimePicker.setCurrentHour(calendar.get(Calendar.MINUTE));
         final int year = calendar.get(Calendar.YEAR);
         final int month = calendar.get(Calendar.MONTH);
         final int day = calendar.get(Calendar.DAY_OF_MONTH);
